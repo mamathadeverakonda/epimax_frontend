@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import TaskListInterface from './TaskListInterface';
+import TaskAssignment from './TaskAssignment';
+import TaskStatusUpdates from './TaskStatusUpdates';
+import TaskSummaryPage from './TaskSummaryPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h1>Task Management Application</h1>
       </header>
+      <TaskListInterface />
+      <TaskAssignment />
+      <TaskStatusUpdates />
+      <TaskSummaryPage />
+      <footer>
+        <p> 2024 Task Management App</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
